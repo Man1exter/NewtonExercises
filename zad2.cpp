@@ -31,10 +31,10 @@ void czytajDane(){
 
 }
 
-void przetworzDane(){
-int wynik;
+void przetworzDane(int a, int b, int c){
+int w; // wynik
 
-wynik = b*b-4*a*c;
+w = b*b-4*a*c;
 
 }
 
