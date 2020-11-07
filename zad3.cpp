@@ -1,57 +1,30 @@
+#include <cstdlib>
 #include <iostream>
-#include <math.h>
+
 
 using namespace std;
 
+long long silnia(int n)                 // long long ---- 92235678234 do 92234567234 ------
+{
+ if( n < 2 )
+        return 1;                          //silnia z 0 i 1 wynosi 1
 
-
-
-void podajDoIlu(){
-int n;
-
-cout << "Podaj numer silni do obliczenia: " << endl;
-cin >> n;
-}
-
-
-
-
-void obliczenia(){
-int n;
-
-if(n >= 1 ){
-
-n = n * (n-1);
-
-} else {
-
-    cout << "Wartość musi być większa lub równa 1" << endl;
-    return;
-}
-cout << "wynik to: " << n << endl;
-}
-
-
-
-
-
-void ostateczny(){
-    int n;
-
-    cout << "ostateczny wynik to: " << n << endl;
+return n * silnia(n-1);                
 }
 
 
 int main()
 {
 
-podajDoIlu();
-obliczenia();
-ostateczny();
+ int n;
+ 
+ cout << "Podaj liczbę: "<< endl;
+ cin >> n;
+ cout << "n! = " << silnia(n) << endl;
 
 
-
-    return 0;
+ return 0;
+ 
 }
 
 // silnia podstawia za n liczby od 1 do n
