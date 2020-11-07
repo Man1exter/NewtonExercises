@@ -31,11 +31,21 @@ void czytajDane(){
 
 }
 
-void przetworzDane(int a, int b, int c){
+void przetworzDane(){
+int a,b,c;
 int w; // wynik
 
-w = b*b-4*a*c;
+w =  b*b -4 * a * c;
 
+cout << "wynik z delty to: " << w << endl;
+}
+
+
+void wyswietlWynik(){
+int w;
+
+
+cout << "  OSTATECZNY  wynik  to:  "<< w << endl; // dodatkowa funcja obliczajaca jeszcze pierwiastek
 }
 
 
@@ -44,6 +54,7 @@ int main()
 
 czytajDane();
 przetworzDane();
+wyswietlWynik();
 
 
     return 0;
