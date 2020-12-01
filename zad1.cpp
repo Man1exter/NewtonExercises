@@ -49,16 +49,16 @@ int x,x2,y,y2;
   oblicz_odleglosc();
 
   float odleglosc = oblicz_odleglosc(x,x2,y,y2);
-  cout<<endl<<"Przez wartosc wynik wynosi: "<<odleglosc;
+  cout<< endl <<"Przez wartosc wynik wynosi: "<< odleglosc;
 
   oblicz_odleglosc(x, x2, y, y2, &d);
-    cout<<endl<<"Przez wskaznik wynik wynosi: "<<d;
+    cout<< endl <<"Przez wskaznik wynik wynosi: "<< d;
 
     oblicz_odleglosc(x, x2, y, y2, d);
-    cout<<endl<<"Przez referencje wynik wynosi: "<<d;
+    cout<< endl <<"Przez referencje wynik wynosi: "<< d;
 
    float wynik=oblicz_odleglosc1(x, x2, y, y2, d);
-    cout<<endl<<"Przez return wynik wynosi: "<<wynik;
+    cout<< endl <<"Przez return wynik wynosi: "<< wynik;
 
   return 0;
 }
@@ -67,15 +67,15 @@ int x,x2,y,y2;
 
 void oblicz_odleglosc(int x3, int x4, int y3, int y4, float *d)
 {
-*d = sqrt(pow(x4-x3, 2.0)+pow(y4-y3, 2.0));
+*d = sqrt(pow( x4-x3 , 2.0)+pow( y4-y3 , 2.0));
 }
 
 void oblicz_odleglosc(int x3, int x4, int y3, int y4, float &delta)
 {
- delta = sqrt(pow(x4-x3, 2.0)+pow(y4-y3, 2.0));
+ delta = sqrt(pow( x4-x3 , 2.0)+pow( y4-y3 , 2.0));
 }
 
 float oblicz_odleglosc1(int x3, int x4, int y3, int y4, float delta)
 {
- return delta = sqrt(pow(x4-x3, 2.0)+pow(y4-y3, 2.0));
+ return delta = sqrt(pow( x4-x3 , 2.0)+pow( y4-y3 , 2.0));
 }
