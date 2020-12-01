@@ -67,15 +67,15 @@ int x,x2,y,y2;
 
 void oblicz_odleglosc(int x3, int x4, int y3, int y4, float *d)
 {
-*d=sqrt(pow(x4-x3, 2)+pow(y4-y3, 2));
+*d = sqrt(pow(x4-x3, 2.0)+pow(y4-y3, 2.0));
 }
 
 void oblicz_odleglosc(int x3, int x4, int y3, int y4, float &delta)
 {
- delta=sqrt(pow(x4-x3, 2)+pow(y4-y3, 2));
+ delta = sqrt(pow(x4-x3, 2.0)+pow(y4-y3, 2.0));
 }
 
 float oblicz_odleglosc1(int x3, int x4, int y3, int y4, float delta)
 {
- return delta=sqrt(pow(x4-x3, 2)+pow(y4-y3, 2));
+ return delta = sqrt(pow(x4-x3, 2.0)+pow(y4-y3, 2.0));
 }
