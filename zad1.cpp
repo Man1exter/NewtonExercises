@@ -1,35 +1,76 @@
 #include <iostream>
-#include <math.h>
-
+#include <cmath>
 using namespace std;
 
 
 
-void obliczOdleglosc(){
 
-    int x1,x2,y1,y2,d;
 
- cout << "podaj wartość x1: " << endl;
-cin >> x1;
-    cout << "podaj wartość x2: " << endl;
-cin >> x2;
-    cout << "podaj wartość y1: " << endl;
-cin >> y1;
-    cout << "podaj wartość y2: " << endl;
-cin>> y2;
 
-d = sqrt(pow(x2-x1, 2.0)+ pow(y2-y1,2.0));
 
-cout << "odległość wynosi: " << d << endl;
+void oblicz_odleglosc()
+{int x, x2, y, y2;
+cin>>x>>x2>>y>>y2;
+float d;
+ d=sqrt(pow(x2-x, 2)+pow(y2-y, 2));
 
+  cout<<"Bezparametrowo: "<<d<<".";
 }
+
+float oblicz_odleglosc(int x3,int x4, int y3, int y4)
+{ float d;
+  d=sqrt(pow(x4-x3, 2)+pow(y4-y3, 2));
+
+    return d;
+}
+
+void oblicz_odleglosc(int, int, int, int, float*);
+
+void oblicz_odleglosc(int, int, int, int, float&);
+
+float oblicz_odleglosc1(int, int, int, int, float);
+
+
 
 
 int main()
+{int x,x2,y,y2;
+ float d;
+
+ cout<<"Podaj kolejno 4 liczby: ";
+    cin>>x>>x2>>y>>y2;
+
+
+  oblicz_odleglosc();
+
+  float odleglosc = oblicz_odleglosc(x,x2,y,y2);
+  cout<<endl<<"Przez wartosc wynik wynosi: "<<odleglosc;
+
+  oblicz_odleglosc(x, x2, y, y2, &d);
+    cout<<endl<<"Przez wskaznik wynik wynosi: "<<d;
+
+    oblicz_odleglosc(x, x2, y, y2, d);
+    cout<<endl<<"Przez referencje wynik wynosi: "<<d;
+
+   float wynik=oblicz_odleglosc1(x, x2, y, y2, d);
+    cout<<endl<<"Przez return wynik wynosi: "<<wynik;
+
+  return 0;
+}
+
+
+
+void oblicz_odleglosc(int x3, int x4, int y3, int y4, float *d)
 {
+*d=sqrt(pow(x4-x3, 2)+pow(y4-y3, 2));
+}
 
-obliczOdleglosc();
+void oblicz_odleglosc(int x3, int x4, int y3, int y4, float &delta)
+{
+ delta=sqrt(pow(x4-x3, 2)+pow(y4-y3, 2));
+}
 
-
-    return 0;
+float oblicz_odleglosc1(int x3, int x4, int y3, int y4, float delta)
+{
+ return delta=sqrt(pow(x4-x3, 2)+pow(y4-y3, 2));
 }
