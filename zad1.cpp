@@ -8,17 +8,22 @@ using namespace std;
 
 
 
-void oblicz_odleglosc()
-{int x, x2, y, y2;
-cin>>x>>x2>>y>>y2;
+void oblicz_odleglosc(){
+
+int x, x2, y, y2;
 float d;
+
+cin>>x>>x2>>y>>y2;
+
  d=sqrt(pow(x2-x, 2)+pow(y2-y, 2));
 
-  cout<<"Bezparametrowo: "<<d<<".";
+  cout<<"Bezparametrowo wynosi to: "<<d<<", ";
 }
 
-float oblicz_odleglosc(int x3,int x4, int y3, int y4)
-{ float d;
+float oblicz_odleglosc(int x3,int x4, int y3, int y4){ 
+
+float d;
+
   d=sqrt(pow(x4-x3, 2)+pow(y4-y3, 2));
 
     return d;
@@ -33,8 +38,8 @@ float oblicz_odleglosc1(int, int, int, int, float);
 
 
 
-int main()
-{int x,x2,y,y2;
+int main(){
+int x,x2,y,y2;
  float d;
 
  cout<<"Podaj kolejno 4 liczby: ";
