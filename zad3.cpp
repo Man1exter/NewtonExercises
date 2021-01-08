@@ -11,7 +11,7 @@ long long silnia(int n)                 // long long ---- 92235678234 do 9223456
 
  if( n <= 1 )
 
-return 1;                          //silnia z 0!= 1 
+return 1;                          // silnia z 0!= 1 
 
 return n * silnia(n - 1);   
 
