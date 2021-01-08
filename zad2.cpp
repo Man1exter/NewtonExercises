@@ -5,43 +5,17 @@ using namespace std;
 
 
 
-void czytajDane(int a,b,c){
+void czytajDane(){
 
-    cout << "Wprowadz dane a: ";
-    cin>> &a;
-
-    while(a <= 0){
-
-        cout << "liczby nie mogą być mniejsze od 0!" << endl;
-        
-        return;         // zabezpieczenie przed wpisaniem liczby mniejszej od zera! 
-    }
-
-    cout << "Wprowadz dane b: ";
-    cin>> &b;
-    cout << "Wprowadz dane c: ";
-    cin>> &c;
-
-
-    cout << "Twoje  dane  to  a:  " << a << endl;
-    cout << "Twoje  dane  to  b:  " << b << endl;
-    cout << "Twoje  dane  to  c:  " << c << endl;
 
 }
 
-void przetworzDane(int a, int b, int c, int *delta, float *pier, float *x, float *x1, float *x2){
-
-*delta = (b*b)-4*a*c;
-*pier = sqrt(*delta);
-*x = -b/(2*a);
-*x1 = (-b-*pier)/(2*a);
-*x2 = (-b+*pier)/(2*a);
+void przetworzDane(){
 
 }
 
 
 void wyswietlWynik(){
-int delta;
 
 }
 
@@ -49,8 +23,6 @@ int delta;
 int main()
 {
 
-int a,b,c,delta;
-float pier,x,x1,x2;
 
     return 0;
 }
