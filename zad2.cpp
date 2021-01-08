@@ -5,8 +5,28 @@ using namespace std;
 
 
 
-void czytajDane(){
+void czytajDane(int a,int b,int c, int delta){
+cout << "Podaj a :"; 
+cin >> a;
+cout << "Podaj b :"; 
+cin >> b;
+cout << "Podaj c :"; 
+cin >> c;
 
+if(a == 0){
+    cout << " b * b =  " << b*b << endl;
+    return;
+} else {
+
+
+cout << endl;
+
+cout << "twoje dane a: " << a << endl;
+cout << "twoje dane b: " << b << endl;
+cout << "twoje dane c: " << c << endl;
+
+cout << endl;
+}
 
 }
 
@@ -22,7 +42,13 @@ void wyswietlWynik(){
 
 int main()
 {
+int a,b,c;
+int x1,x2;
+int delta;
+delta = b*b - 4 * a * c;  
 
+cout << "podaj dane: " << endl;
+czytajDane(a , b, c, delta);
 
     return 0;
 }
