@@ -5,7 +5,7 @@ using namespace std;
 
 
 
-void czytajDane(int a,int b,int c, int delta){
+void czytajDane(int a,int b,int c, double delta){
 cout << "Podaj a :"; 
 cin >> a;
 cout << "Podaj b :"; 
@@ -30,25 +30,62 @@ cout << endl;
 
 }
 
-void przetworzDane(){
+void przetworzDane(int a,int b,int c, double delta, double x1, double x2){
+delta = b * b - 4 * a * c;
+cout << "delta poczatkowa: " << delta << endl;
+delta = sqrt(delta);
+cout << "delta po przepierwiastkowaniu: " << delta << endl;
+
+
+if(a==0)
+    {
+        cout<<"To nie jest rownanie kwadratowe" << endl;
+    }
+    else
+    {
+        double delta = b*b-4*a*c;
+        double x1, x2;
+ 
+        if( delta > 0 )
+        {
+            x1 = (-b - sqrt(delta)) / (2*a);
+            x2 = (-b + sqrt(delta)) / (2*a);
+            cout<<"x1 = "<<x1<<"\n";
+            cout<<"x2 = "<<x2;
+        }
+ 
+        else if(delta==0)
+        {
+            x1=-b/(2*a);
+            cout<<"x0 = "<<x1;
+        }
+ 
+        else // delta < 0
+        {
+            cout<<"Brak rozwiazan";
+        }
+    }
 
 }
 
 
-void wyswietlWynik(){
-
+void wyswietlWynik(int a,int b,int c, double delta, double x1, double x2){
+cout << "delta po przepierwiastkowaniu: " << delta << endl;
+cout << "x1: " << x1 << endl;
+cout << "x2: " << x2 << endl;
 }
 
 
 int main()
 {
 int a,b,c;
-int x1,x2;
-int delta;
-delta = b*b - 4 * a * c;  
+double x1,x2;
+double delta;
 
 cout << "podaj dane: " << endl;
 czytajDane(a , b, c, delta);
+przetworzDane(a , b , c, delta, x1, x2);
+wyswietlWynik(a , b , c, delta, x1, x2);
 
     return 0;
 }
