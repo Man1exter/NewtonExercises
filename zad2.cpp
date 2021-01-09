@@ -7,6 +7,23 @@ using namespace std;
 
 void czytajDane(){
 
+int a,b,c;
+int *wsk_a;
+int *wsk_b;
+int *wsk_c;
+wsk_a = &a;
+wsk_b = &b;
+wsk_c = &c;
+
+cout << "podaj dane: " << endl;
+cout << "podaj a: " << endl;
+cin >> a;
+cout << "podaj b: " << endl;
+cin >> b;
+cout << "podaj c: " << endl;
+cin >> c;
+
+cout << "Przez wskaznik: " <<*wsk_a << endl;
 }
 
 
@@ -22,13 +39,12 @@ void wyswietlWynik(){
 
 int main()
 {
-int a,b,c;
+
 double delta;
 double deltaPrzep;
 double x1,x2;
 int liczbaPierwiastkow;
 
-cout << "podaj dane: " << endl;
 czytajDane();
 przetworzDane();
 wyswietlWynik();
