@@ -5,49 +5,38 @@ using namespace std;
 
 
 
-void czytajDane(){
+float czytajDane(){
 
-int a,b,c;
-int *wsk_a;
-int *wsk_b;
-int *wsk_c;
-wsk_a = &a;
-wsk_b = &b;
-wsk_c = &c;
+float liczba;
 
-cout << "podaj dane: " << endl;
-cout << "podaj a: " << endl;
-cin >> a;
-cout << "podaj b: " << endl;
-cin >> b;
-cout << "podaj c: " << endl;
-cin >> c;
+cout << "Podaj dane a,b,c: ";
+cin >> liczba;
 
-cout << "Przez wskaznik: " <<*wsk_a << endl;
-}
-
-
-void przetworzDane(){
+return liczba;
 
 }
 
-void wyswietlWynik(){
+
+float przetworzDane(){
 
 
 }
+
+// void wyswietlWynik(){
+
+
+// }
 
 
 int main()
 {
+float a,b,c;
+a = czytajDane();
+b = czytajDane();
+c = czytajDane();
 
-double delta;
-double deltaPrzep;
-double x1,x2;
-int liczbaPierwiastkow;
-
-czytajDane();
 przetworzDane();
-wyswietlWynik();
+// wyswietlWynik();
 
     return 0;
 }
