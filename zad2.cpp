@@ -14,7 +14,7 @@ cout << "Podaj c :";
 cin >> c;
 
 if(a == 0){
-    cout << " b * b =  " << b*b << endl;
+    cout << " b * b =  " << b * b << endl;
     return;
 } else {
 
@@ -30,14 +30,16 @@ cout << endl;
 
 }
 
-void przetworzDane(int a,int b,int c, double delta, double x1, double x2){
+void przetworzDane(int a,int b,int c, double delta, double x1, double x2, double deltaPrzep){
+
 delta = b * b - 4 * a * c;
 cout << "delta poczatkowa: " << delta << endl;
-delta = sqrt(delta);
-cout << "delta po przepierwiastkowaniu: " << delta << endl;
+
+deltaPrzep = sqrt(delta);
+cout << "delta po przepierwiastkowaniu: " << deltaPrzep << endl;
 
 
-if(a==0)
+if(a == 0)
     {
         cout<<"To nie jest rownanie kwadratowe" << endl;
     }
@@ -69,10 +71,12 @@ if(a==0)
 }
 
 
-void wyswietlWynik(int a,int b,int c, double delta, double x1, double x2){
+void wyswietlWynik(int a,int b,int c, double delta, double x1, double x2, double deltaPrzep){
+
 cout << "delta po przepierwiastkowaniu: " << delta << endl;
 cout << "x1: " << x1 << endl;
 cout << "x2: " << x2 << endl;
+
 }
 
 
@@ -81,11 +85,12 @@ int main()
 int a,b,c;
 double x1,x2;
 double delta;
+double deltaPrzep;
 
 cout << "podaj dane: " << endl;
 czytajDane(a , b, c, delta);
-przetworzDane(a , b , c, delta, x1, x2);
-wyswietlWynik(a , b , c, delta, x1, x2);
+przetworzDane(a , b , c, delta, x1, x2, deltaPrzep);
+wyswietlWynik(a , b , c, delta, x1, x2, deltaPrzep);
 
     return 0;
 }
