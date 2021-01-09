@@ -12,31 +12,50 @@ float liczba;
 cout << "Podaj dane a,b,c: ";
 cin >> liczba;
 
+
 return liczba;
 
 }
 
 
-float przetworzDane(){
+float przetworzDane(float a, float b, float c){
 
+float deltaWynik;
+double deltaPierw;
+
+deltaWynik = b * b - 4 * a * c;
+cout << "Przed pierwiastkowaniem: " << deltaWynik << endl;
+
+deltaWynik = sqrt((double)deltaWynik);
+cout << "Po przepierwiastkowaniu: " << deltaWynik << endl;
+
+cout << endl;
+
+return deltaWynik;
 
 }
 
-// void wyswietlWynik(){
-
-
-// }
+void wyswietlWynik(float a, float b, float c){
+cout << "Twoje dane:" << endl;
+cout << "a:  " << a << endl;
+cout << "b:  " << b << endl;
+cout << "c:  " << c << endl;
+cout << endl;
+}
 
 
 int main()
 {
 float a,b,c;
+float delta;
+
 a = czytajDane();
 b = czytajDane();
 c = czytajDane();
 
-przetworzDane();
-// wyswietlWynik();
+
+delta = przetworzDane(a,b,c);
+wyswietlWynik(a,b,c);
 
     return 0;
 }
