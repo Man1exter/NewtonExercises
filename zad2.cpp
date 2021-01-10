@@ -37,15 +37,15 @@ if(delta < 0){
 switch(liczbaPierwiastkow){
 
     case 0:
-
+    cout << "ok" << endl;
     break;
 
     case 1:
-
+cout << "ok" << endl;
     break;
 
     case 2:
-
+cout << "ok" << endl;
     break;
 }
 
