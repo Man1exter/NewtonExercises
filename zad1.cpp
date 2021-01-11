@@ -11,14 +11,14 @@ cin>>x>>x2>>y>>y2;
 
  d = sqrt(pow(x2-x, 2)+pow(y2-y, 2));
 
-  cout<<"Bezparametrowo wynosi to: "<< d <<", ";
+  cout<<"Bezparametrowo wynosi to: "<< d;
 }
 
 float oblicz_odleglosc(int x3,int x4, int y3, int y4){ 
 
 float d;
 
-  d=sqrt(pow(x4-x3, 2)+pow(y4-y3, 2));
+  d = sqrt(pow(x4-x3, 2)+pow(y4-y3, 2));
 
     return d;
 }
