@@ -2,12 +2,6 @@
 #include <cmath>
 using namespace std;
 
-
-
-
-
-
-
 void oblicz_odleglosc(){
 
 int x, x2, y, y2;
@@ -15,9 +9,9 @@ float d;
 
 cin>>x>>x2>>y>>y2;
 
- d=sqrt(pow(x2-x, 2)+pow(y2-y, 2));
+ d = sqrt(pow(x2-x, 2)+pow(y2-y, 2));
 
-  cout<<"Bezparametrowo wynosi to: "<<d<<", ";
+  cout<<"Bezparametrowo wynosi to: "<< d <<", ";
 }
 
 float oblicz_odleglosc(int x3,int x4, int y3, int y4){ 
@@ -43,9 +37,7 @@ int x,x2,y,y2;
  float d;
 
  cout<<"Podaj kolejno 4 liczby: ";
-    cin>>x>>x2>>y>>y2;
-
-
+    
   oblicz_odleglosc();
 
   float odleglosc = oblicz_odleglosc(x,x2,y,y2);
