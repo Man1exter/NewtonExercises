@@ -1,5 +1,6 @@
 #include <iostream>
 #include <math.h>
+#include <iomanip>
 
 using namespace std;
 
@@ -26,18 +27,38 @@ cout << endl;
 
 }
 
-void przetworz_dane(int a,int b, int c, float delta){
+void przetworz_dane(int a,int b, int c, float &delta,int &x1,int &x2, int &liczbaPierwiastkow){
+
     delta = b * b - 4 * a * c;
-    cout << delta << endl;
+    cout << "Delta przed pierwiastkowaniem: " << delta << endl;
+
+    if(delta > 0){
+      liczbaPierwiastkow = 2;
+      cout << "Liczba pierwiastkow: " << liczbaPierwiastkow << endl;
+    }
+     else if(delta = 0){
+      liczbaPierwiastkow = 1;
+      cout << "Liczba pierwiastkow: " << liczbaPierwiastkow << endl;
+    }
+    else {
+      liczbaPierwiastkow = 0;
+      cout << "Liczba pierwiastkow: " << liczbaPierwiastkow << endl;
+    }
+
+
 }
 
 
 int main()
 {
 int a,b,c;
+int x1,x2;
+int liczbaPierwiastkow;
 float delta;
+
+
 czytaj_dane(a,b,c);
-przetworz_dane(a,b,c,delta);
+przetworz_dane(a,b,c,delta,x1,x2,liczbaPierwiastkow);
 
     return 0;
 }
