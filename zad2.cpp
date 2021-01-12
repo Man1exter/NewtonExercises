@@ -28,19 +28,19 @@ cout << endl;
 
 }
 
-void przetworz_dane(int a,int b, int c, float &delta,int x1,int x2, int &liczbaPierwiastkow){
+void przetworz_dane(int a,int b, int c, float &delta,float &deltaPo,int &x1,int &x2, int &liczbaPierwiastkow){
 
     delta = b * b - 4 * a * c;
     cout << "Delta przed pierwiastkowaniem: " << delta << endl;
 
-    delta = sqrt(delta);
-    cout << "Delta po pierwiastkowaniem: " << delta << endl;
+    deltaPo = sqrt(delta);
+    cout << "Delta po pierwiastkowaniem: " << deltaPo << endl;
 
-    if(delta > 0){
+    if(deltaPo > 0){
       liczbaPierwiastkow = 2;
       cout << "Liczba pierwiastkow: " << liczbaPierwiastkow << endl;
     }
-     else if(delta = 0){
+     else if(deltaPo = 0){
       liczbaPierwiastkow = 1;
       cout << "Liczba pierwiastkow: " << liczbaPierwiastkow << endl;
     }
@@ -71,9 +71,19 @@ void przetworz_dane(int a,int b, int c, float &delta,int x1,int x2, int &liczbaP
 
 }
 
-void wyswietl_wynik(int a,int b, int c, float delta,int x1,int x2, int liczbaPierwiastkow){
+void wyswietl_wynik(int a,int b, int c, float delta,float deltaPo,int x1,int x2, int liczbaPierwiastkow){
     cout << endl;
     cout << "delta przed pierwiastkowaniem: " << delta << endl;
+    cout << "delta po pierwiastkowaniem: " << deltaPo << endl;
+    cout << "liczba pierwiastkow: " << liczbaPierwiastkow << endl;
+    if(liczbaPierwiastkow = 2){
+     cout << "x1: " << x1 << endl;
+     cout << "x2: " << x2 << endl;
+    } else if (liczbaPierwiastkow = 1){
+    cout << "x1: " << x1 << endl;
+    }else{
+        cout << "Brak liczby pierwiastow" << endl;
+    }
 }
 
 
@@ -83,11 +93,12 @@ int a,b,c;
 int x1,x2;
 int liczbaPierwiastkow;
 float delta;
+float deltaPo;
 
 
 czytaj_dane(a,b,c);
-przetworz_dane(a,b,c,delta,x1,x2,liczbaPierwiastkow);
-wyswietl_wynik(a,b,c,delta,x1,x2,liczbaPierwiastkow);
+przetworz_dane(a,b,c,delta,deltaPo,x1,x2,liczbaPierwiastkow);
+wyswietl_wynik(a,b,c,delta,deltaPo,x1,x2,liczbaPierwiastkow);
 
     return 0;
 }
