@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// -5 4 2
 
 void czytaj_dane(int &a, int &b, int &c){
 
@@ -27,10 +28,13 @@ cout << endl;
 
 }
 
-void przetworz_dane(int a,int b, int c, float &delta,int &x1,int &x2, int &liczbaPierwiastkow){
+void przetworz_dane(int a,int b, int c, float &delta,int x1,int x2, int &liczbaPierwiastkow){
 
     delta = b * b - 4 * a * c;
     cout << "Delta przed pierwiastkowaniem: " << delta << endl;
+
+    delta = sqrt(delta);
+    cout << "Delta po pierwiastkowaniem: " << delta << endl;
 
     if(delta > 0){
       liczbaPierwiastkow = 2;
@@ -45,7 +49,31 @@ void przetworz_dane(int a,int b, int c, float &delta,int &x1,int &x2, int &liczb
       cout << "Liczba pierwiastkow: " << liczbaPierwiastkow << endl;
     }
 
+    switch(liczbaPierwiastkow){
 
+        case 2:
+         x1 = -b - sqrt(delta) / a * a;
+         x2 = -b + sqrt(delta) / a * a;
+         cout << "x1: " << x1 << endl;
+         cout << "x2: " << x2 << endl;
+        break;
+
+        case 1:
+         x1 = -b / (2*a);
+         cout << "x1: " << x1 << endl;
+        break;
+
+        case 0:
+         cout << "Brak miejsc zerowych funckji kwadratowej!" << endl;
+        break;
+    }
+
+
+}
+
+void wyswietl_wynik(int a,int b, int c, float delta,int x1,int x2, int liczbaPierwiastkow){
+    cout << endl;
+    cout << "delta przed pierwiastkowaniem: " << delta << endl;
 }
 
 
@@ -59,6 +87,7 @@ float delta;
 
 czytaj_dane(a,b,c);
 przetworz_dane(a,b,c,delta,x1,x2,liczbaPierwiastkow);
+wyswietl_wynik(a,b,c,delta,x1,x2,liczbaPierwiastkow);
 
     return 0;
 }
