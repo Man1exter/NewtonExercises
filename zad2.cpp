@@ -17,8 +17,10 @@ cout << "podaj c: ";
 cin >> c;
 
 if(a == 0){
+    
     cout << " Rownanie liniowe! " << b * b << endl;
     return;
+
 } else {
 
 cout << endl;
