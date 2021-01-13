@@ -17,7 +17,7 @@ cout << "podaj c: ";
 cin >> c;
 
 if(a == 0){
-    
+
     cout << " Rownanie liniowe! " << b * b << endl;
     return;
 
@@ -74,6 +74,7 @@ void przetworz_dane(int a,int b, int c, float &delta,float &deltaPo,int &x1,int 
 }
 
 void wyswietl_wynik(int a,int b, int c, float delta,float deltaPo,int x1,int x2, int liczbaPierwiastkow){
+
     cout << endl;
     cout << "delta przed pierwiastkowaniem: " << delta << endl;
     cout << "delta po pierwiastkowaniem: " << deltaPo << endl;
@@ -85,6 +86,7 @@ void wyswietl_wynik(int a,int b, int c, float delta,float deltaPo,int x1,int x2,
     cout << "x1: " << x1 << endl;
     }else{
         cout << "Brak liczby pierwiastow" << endl;
+        
     }
 }
 
