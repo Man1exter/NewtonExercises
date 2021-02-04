@@ -7,7 +7,7 @@ void oblicz_odleglosc(){
 int x, x2, y, y2;
 float d;
 
-cin>>x>>x2>>y>>y2;
+cin >> x >> x2 >> y >> y2;
 
  d = sqrt(pow(x2-x, 2)+pow(y2-y, 2));
 
@@ -29,9 +29,6 @@ void oblicz_odleglosc(int, int, int, int, float&);
 
 float oblicz_odleglosc1(int, int, int, int, float);
 
-
-
-
 int main(){
 int x,x2,y,y2;
  float d;
@@ -41,21 +38,19 @@ int x,x2,y,y2;
   oblicz_odleglosc();
 
   float odleglosc = oblicz_odleglosc(x,x2,y,y2);
-  cout<< endl <<"Przez wartosc wynik wynosi: "<< odleglosc;
+    cout<< endl <<"Przez wartosc wynik wynosi: "<< odleglosc;
 
   oblicz_odleglosc(x, x2, y, y2, &d);
     cout<< endl <<"Przez wskaznik wynik wynosi: "<< d;
 
-    oblicz_odleglosc(x, x2, y, y2, d);
+  oblicz_odleglosc(x, x2, y, y2, d);
     cout<< endl <<"Przez referencje wynik wynosi: "<< d;
 
-   float wynik=oblicz_odleglosc1(x, x2, y, y2, d);
+  float wynik=oblicz_odleglosc1(x, x2, y, y2, d);
     cout<< endl <<"Przez return wynik wynosi: "<< wynik;
 
   return 0;
 }
-
-
 
 void oblicz_odleglosc(int x3, int x4, int y3, int y4, float *d)
 {
