@@ -1,10 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 
-
 using namespace std;
-
-
 
 long long silnia(int n)                 // long long ---- 92235678234 do 92234567234 ------
 {
@@ -16,7 +13,6 @@ return 1;                          // silnia z 0!= 1
 return n * silnia(n - 1);   
 
 }
-
 
 int main()
 {
